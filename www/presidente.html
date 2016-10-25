@@ -1,0 +1,6 @@
+<div ng-controller="renderizar_presidente" class="day" id="nombre"><span class="typcn typcn-calendar-outline" style="font-size: 15px;  margin-right: 6px;"></span><span id="fecha"></span>Presidente Generales <span class="escrutinio pull-right button-balanced">Escrutinio: <span id="escrutinio">{{escrutinio}}</span>%</span></div>
+<div class="alarm-content">
+				<ion-refresher pulling-text="Tire para refrescar..." on-refresh="onReload()"></ion-refresher>
+				<ul class="lista" ng-bind-html="customHtml"></ul>
+				<div id="progress"></div>
+</div>		

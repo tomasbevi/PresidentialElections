@@ -1,0 +1,19 @@
+<div ng-controller="renderizar_ciudad" class="day" id="nombre">
+<span class="typcn typcn-calendar-outline" style="font-size: 15px;  margin-right: 6px;"></span>
+<span id="fecha"></span>
+Ciudad {{ciudad}} 
+<span class="escrutinio pull-right button-balanced">Escrutinio: <span id="escrutinio">{{escrutinio}}</span>%</span>
+</div>
+<div class="alarm-content">
+				<ion-refresher pulling-text="Tire para refrescar..." on-refresh="onReload()"></ion-refresher>
+				<ul class="lista" ng-bind-html="customHtml"></ul>
+				<div ng-show="resultados_visibilidad==true" class="padding">
+					<h3>No hay Resultados para esta {{ciudad_abajo}}</h3>
+					<p>Esto puede deberse a que dicha localidad o provincia no realizaron la votación de sus representantes a nivel municipal.</p>
+				</div>
+				<div ng-show="error==true" class="padding">
+					<h3>Ocurrio un error al encontrar la información.</h3>
+					<p>Esto puede deberse a que no tiene internet.</p>
+				</div>
+			
+</div>		
